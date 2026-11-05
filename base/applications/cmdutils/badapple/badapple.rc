@@ -1,0 +1,20 @@
+/*
+ * PROJECT:     MinedowsOS Bad Apple!! player
+ * LICENSE:     GPL-3.0-or-later (https://spdx.org/licenses/GPL-3.0-or-later)
+ * PURPOSE:     Resources
+ * COPYRIGHT:   Copyright 2026 Kocurowy96
+ */
+
+#include <windef.h>
+#include <winuser.h>
+
+#include "resource.h"
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+#define REACTOS_STR_FILE_DESCRIPTION  "Bad Apple!! ASCII Player"
+#define REACTOS_STR_INTERNAL_NAME     "badapple"
+#define REACTOS_STR_ORIGINAL_FILENAME "badapple.exe"
+#include <reactos/version.rc>
+
+IDR_BADAPPLE RCDATA "res/badapple.bin"

@@ -1,0 +1,7 @@
+include_directories(${REACTOS_SOURCE_DIR}/sdk/include/reactos/libs/zlib)
+add_rc_deps(badapple.rc ${CMAKE_CURRENT_SOURCE_DIR}/res/badapple.bin)
+add_executable(badapple badapple.c badapple.rc)
+set_module_type(badapple win32cui UNICODE)
+target_link_libraries(badapple zlib)
+add_importlibs(badapple msvcrt kernel32)
+add_cd_file(TARGET badapple DESTINATION reactos/system32 FOR all)
