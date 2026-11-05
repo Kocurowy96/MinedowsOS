@@ -39,7 +39,7 @@ static VOID
 Run(VOID)
 {
     WNDCLASSEXW wc = {0};
-    HWND hwnd, hBtn;
+    HWND hwnd;
     MSG msg;
 
     wc.cbSize = sizeof(wc);
@@ -55,10 +55,10 @@ Run(VOID)
                           NULL, NULL, g_pInfo->hInstance, NULL);
     if (!hwnd) return;
 
-    hBtn = CreateWindowW(L"BUTTON", L"Command Prompt",
-                         WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
-                         10, 10, 280, 40,
-                         hwnd, (HMENU)IDC_CMD_BUTTON, g_pInfo->hInstance, NULL);
+    CreateWindowW(L"BUTTON", L"Command Prompt",
+                  WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+                  10, 10, 280, 40,
+                  hwnd, (HMENU)IDC_CMD_BUTTON, g_pInfo->hInstance, NULL);
 
     ShowWindow(hwnd, SW_SHOW);
     UpdateWindow(hwnd);
